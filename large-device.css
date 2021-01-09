@@ -7,6 +7,24 @@
   color: #fdfd97;
 }
 
+.nav-bar-wrapper {
+  display: flex;
+  background-color: black;
+  height: 10vh;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+.nav-bar-wrapper ul {
+  color: white;
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
 .top-bar,
 .bottom-bar {
   display: none;
@@ -36,12 +54,24 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-header {
-  background-color: #77dd76;
+main,
+footer {
+  position: relative;
+  top: 10vh;
+}
+
+.head-wrapper {
+  background-color: #ce9460;
   display: flex;
-  height: 100vh;
+  height: 90vh;
   justify-content: space-around;
   align-items: center;
+}
+
+#film1 {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
 }
 
 .left-bar,
@@ -54,9 +84,14 @@ header {
 #right-logo {
   height: 100%;
   animation: fill 1s ease forwards 6s;
+  position: relative;
+  z-index: 1;
 }
 #nadia-pic {
+  position: relative;
+  z-index: 1;
   height: 100%;
+  border: 3px solid white;
 }
 
 @keyframes line-anim {
@@ -74,8 +109,8 @@ header {
   }
 }
 
-main {
-  background-color: #fdfd97;
+.main-wrapper {
+  background-color: #f7d3ac;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -83,7 +118,7 @@ main {
 }
 
 .gallery {
-  background-color: #d2fdbb;
+  background-color: #f7d3ac;
   width: 90%;
   height: 90%;
   overflow: auto;
@@ -102,10 +137,11 @@ main {
 
 footer {
   height: 100px;
-  background-color: #77dd76;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 3px solid black;
 }
 
 #copyright {
