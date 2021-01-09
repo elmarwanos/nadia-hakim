@@ -1,0 +1,114 @@
+/*This is just to keep track of the colors*/
+.color {
+  color: #77dd76;
+  color: #a6eca8;
+  color: #d2fdbb;
+  color: #fbfde1;
+  color: #fdfd97;
+}
+
+.top-bar,
+.bottom-bar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  outline: 0px;
+  transition: none;
+  line-height: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+header {
+  background-color: #77dd76;
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-bar,
+.mid-pic,
+.right-bar {
+  height: 80%;
+}
+
+#left-logo,
+#right-logo {
+  height: 100%;
+  animation: fill 1s ease forwards 6s;
+}
+#nadia-pic {
+  height: 100%;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+main {
+  background-color: #fdfd97;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  background-color: #d2fdbb;
+  width: 90%;
+  height: 90%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 5%;
+}
+
+.gallery img {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+  border: solid 5px black;
+  padding: 5%;
+}
+
+footer {
+  height: 100px;
+  background-color: #77dd76;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#copyright {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
