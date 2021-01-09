@@ -7,6 +7,24 @@
   color: #fdfd97;
 }
 
+.nav-bar-wrapper {
+  display: flex;
+  background-color: black;
+  height: 7vh;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+.nav-bar-wrapper ul {
+  color: white;
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
 #left-logo,
 #right-logo {
   display: none;
@@ -20,6 +38,7 @@
   margin: 0px;
   outline: 0px;
   transition: none;
+  line-height: 0;
 }
 
 html,
@@ -27,13 +46,25 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  background-color: #77dd76;
-  height: 100vh;
+main,
+footer {
+  position: relative;
+  top: 7vh;
+}
+
+.head-wrapper {
+  background-color: #ce9460;
   display: flex;
   flex-direction: column;
+  height: 93vh;
   justify-content: space-around;
   align-items: center;
+}
+
+#film1 {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
 }
 
 .mid-pic {
@@ -44,10 +75,15 @@ header {
 #bottom-logo {
   width: 100%;
   animation: fill 1s ease forwards 6s;
+  position: relative;
+  z-index: 1;
 }
 
 #nadia-pic {
+  position: relative;
+  z-index: 1;
   height: 100%;
+  border: 3px solid white;
 }
 
 @keyframes line-anim {
@@ -65,8 +101,8 @@ header {
   }
 }
 
-main {
-  background-color: #fdfd97;
+.main-wrapper {
+  background-color: #f7d3ac;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -74,14 +110,13 @@ main {
 }
 
 .gallery {
-  background-color: #d2fdbb;
+  background-color: #f7d3ac;
   width: 90%;
   height: 90%;
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5%;
-
 }
 
 .gallery img {
@@ -93,17 +128,17 @@ main {
 }
 
 footer {
-    height: 100px;
-    background-color: #77dd76;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #copyright {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: medium;
-    text-align: center;
-  }
-  
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid black;
+}
+
+#copyright {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  text-align: center;
+}
